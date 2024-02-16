@@ -1,57 +1,43 @@
-    document.addEventListener('DOMContentLoaded', function () {
-        
-        const links = document.querySelectorAll('.link-container .link');
+document.addEventListener('DOMContentLoaded', function () {
+    const links = document.querySelectorAll('.link-container .link');
 
-        function addBlurToOtherLinks(event) {
-            links.forEach(link => {
-                if (link !== event.target) {
-                    link.style.filter = 'blur(5px)';
-                }
-            });
-        }
+    links.forEach(link => {
+        link.addEventListener('mouseenter', function(event) {
+           
+            addBlurToOtherLinks(event);
+          
+            scaleUpLink(event);
+        });
+        link.addEventListener('mouseleave', function(event) {
+            
+            removeBlurFromLinks();
+           
+            resetLinkScale(event);
+        });
+    });
 
-     
-        function removeBlurFromLinks() {
-            links.forEach(link => {
-                link.style.filter = '';
-            });
-        }
 
+
+    function addBlurToOtherLinks(event) {
         links.forEach(link => {
-            link.addEventListener('mouseenter', addBlurToOtherLinks);
-            link.addEventListener('mouseleave', removeBlurFromLinks);
+            if (link !== event.target) {
+                link.style.filter = 'blur(5px)';
+            }
         });
-    });
+    }
 
-
-    document.addEventListener('DOMContentLoaded', function () {
-        const links = document.querySelectorAll('.link-container .link');
-
-        function scaleUpLink(event) {
-            event.target.style.transform = 'scale(1.5)';
-            event.target.style.transition = 'transform 0.3s ease'; 
-        }
-
-      
-        function resetLinkScale(event) {
-            event.target.style.transform = 'scale(1)'; 
-        }
-
+    function removeBlurFromLinks() {
         links.forEach(link => {
-            link.addEventListener('mouseenter', scaleUpLink);
-            link.addEventListener('mouseleave', resetLinkScale);
+            link.style.filter = '';
         });
-    });
+    }
 
-    document.addEventListener('DOMContentLoaded', function () {
-        const slider = document.getElementById('brightness-slider');
+    function scaleUpLink(event) {
+        event.target.style.transform = 'scale(1.5)';
+        event.target.style.transition = 'transform 0.3s ease';
+    }
 
-        slider.addEventListener('input', function() {
-            const brightnessValue = slider.value;
-            document.documentElement.style.filter = `brightness(${brightnessValue}%)`;
-        });
-    });
-
-
-    
-
+    function resetLinkScale(event) {
+        event.target.style.transform = 'scale(1)';
+    }
+});
