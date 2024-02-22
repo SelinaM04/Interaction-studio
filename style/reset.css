@@ -234,6 +234,12 @@ input {
         margin: 0 10px;
     }
 
+    .img1, .img2 {
+        width: 100vw;
+        height: 100vh;
+         /* Allow images to fill the screen on very small devices */
+    }
+
     .flux p {
         font-size: 16px; /* Further adjust for small screens */
     }
@@ -243,7 +249,8 @@ input {
     }
 
     .slider-container {
-        width: 100%; /* Make the slider easier to use on small devices */
+        width: 100%;
+      /* Make the slider easier to use on small devices */
     }
 
     .hint-text, .flux {
