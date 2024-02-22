@@ -205,55 +205,53 @@ input {
     cursor: pointer;
   }
 
-  @media (max-width: 1024px) { /* For iPads and lower resolutions */
-    img {
-        height: auto;
-        width: 100%;
+  @media (max-width: 1024px) { 
+    .img1, .img2 {
+        width: 100vw;
+        height: 100vh;
     }
     
     .link {
-        font-size: 60px; /* Adjusted for better readability on tablets */
-        margin: 0 20px; /* Adjust spacing */
+        font-size: 60px; 
+        margin: 0 20px; 
     }
 
     .flux p {
-        font-size: 20px; /* Adjust for readability */
+        font-size: 20px; 
     }
 
     .slider-container {
         top: calc(100% - 60px);
         left: 50%;
-        width: 80%; /* Adjust slider width for easier use */
+        width: 80%; 
     }
 }
 
 
-  @media (max-width: 767px) { /* For phones */
+  @media (max-width: 767px) { 
     .link {
-        font-size: 40px; /* Smaller screens require smaller fonts */
+        font-size: 40px; 
         margin: 0 10px;
     }
 
     .img1, .img2 {
         width: 100vw;
         height: 100vh;
-         /* Allow images to fill the screen on very small devices */
     }
 
     .flux p {
-        font-size: 16px; /* Further adjust for small screens */
+        font-size: 16px; 
     }
 
     .title-spacing {
-        letter-spacing: 0.5em; /* Less spacing for smaller screens */
+        letter-spacing: 0.5em;
     }
 
     .slider-container {
-        width: 100%;
-      /* Make the slider easier to use on small devices */
+        width: 90%;
     }
 
     .hint-text, .flux {
-        font-size: 14px; /* Adjust text size for better readability */
+        font-size: 14px; 
     }
 }

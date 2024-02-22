@@ -13,12 +13,7 @@ body, html {
 }
 
 .img1 {
-  position: absolute;
-  top: 0px;
   left: 0px;
-  width: 50vw;
-  height: auto;
-  z-index: 2;
   animation: img1 10s ease both;
 }
 
@@ -35,12 +30,7 @@ body, html {
 }
 
 .img2 {
-  position: absolute;
-  top: 0px;
   right: 0px;
-  width: 50vw;
-  height: auto;
-  z-index: 2;
   animation: img2 10s ease both;
 }
 
@@ -57,9 +47,16 @@ body, html {
 }
 
 .img1, .img2 {
-  max-height: 100vh; 
+  position: absolute;
+  top: 0px;
+  width: 50vw;
+  height: auto;
+  z-index: 2;
+  max-height: 100vh;
   max-width: 100vw;
 }
+
+
 
 .notinteractive {
   pointer-events: none;
@@ -230,4 +227,73 @@ body, html {
   border-radius: 0;
   border-bottom: 2px solid #eee;
 }
+
+@media (max-width: 768px) {
+  #content, #second-Content, #third-Content {
+      width: 80vw;
+      margin: 5vh auto;
+      padding: 2vh;
+      left: 50%;
+      transform: translateX(-50%);
+      position: absolute;
+  }
+
+  
+  #btn, #btn2 {
+      bottom: 5vh;
+      width: auto;
+      font-size: 3vh;
+  }
+
+  #btn {
+      left: 25%; 
+      transform: translateX(-50%);
+  }
+
+  #btn2 {
+      left: 75%; 
+      transform: translateX(-50%);
+  }
+
+  #btn, #btn2 {
+    font-size: 15px; 
+}
+
+.img1, .img2 {
+  width: 100vw;
+  height: 100vh;
+}
+}
+
+@media (max-width: 480px) {
+  #content, #second-Content, #third-Content {
+      width: 90vw;
+      margin: 5vh auto;
+      padding: 4vh 2vw;
+      left: 50%;
+      transform: translateX(-50%);
+     
+  }
+
+  .img1, .img2 {
+    width: 100vw;
+    height: 100vh;
+}
+  #btn {
+      bottom: 15vh;
+      left: 25%; 
+      transform: translateX(-50%);
+  }
+
+  #btn2 {
+      bottom: 15vh;
+      left: 75%; 
+      transform: translateX(-50%);
+  }
+
+  #btn, #btn2 {
+    font-size: 15px; 
+}
+}
+
 
