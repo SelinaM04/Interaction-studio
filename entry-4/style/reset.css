@@ -14,25 +14,26 @@ body, html {
 
 #content {
     position: absolute;
-    width: 60vh;
-    border: 10vh; 
-    padding: 5vh;
-    margin: 10vh;
+    width: 500px;
+    border: 15px ;
+    left: 50vh;
+    top: 20vh;
+    padding: 50px;
+    margin: 20px;
     color: white;
     opacity: 1; 
     transition: opacity 0.5s ease-in-out;
     cursor: none;
-    
 }
 
 #second-Content {
-    width: 60vh;
+    width: 100vh;
     border: 10vh; 
-    padding: 5vh;
-    margin: 10vh;
+    padding: 10vh;
+    margin: 20vh;
     position: absolute;
     top: 10vh;
-    left: 50vh;
+    left: 40vh;
     color: white; 
     opacity: 1; 
     transition: opacity 0.5s ease-in-out; 
@@ -40,13 +41,13 @@ body, html {
   }
 
 #third-Content {
-    width: 90vh;
+    width: 60vh;
     border: 10vh; 
-    padding: 5vh;
-    margin: 10vh;
+    padding: 10vh;
+    margin: 20vh;
     position: absolute;
-    top: 5vh;
-    left: 80vh;
+    top: 10vh;
+    left: 40vh;
     color: white; 
     opacity: 1; 
     transition: opacity 0.5s ease-in-out; 
