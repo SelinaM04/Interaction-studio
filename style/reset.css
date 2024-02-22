@@ -9,12 +9,7 @@ body{
 }
 
 .img1 {
-    position: absolute;
-    top: 0px;
     left: 0px;
-    width: 50vw;
-    height: auto;
-    z-index: 2;
     animation: img1 10s ease both;
 }
 
@@ -31,12 +26,7 @@ body{
 }
 
 .img2 {
-    position: absolute;
-    top: 0px;
     right: 0px;
-    width: 50vw;
-    height: auto;
-    z-index: 2;
     animation: img2 10s ease both;
 }
 
@@ -53,7 +43,12 @@ body{
 }
 
 .img1, .img2 {
-    max-height: 100vh; 
+    position: absolute;
+    top: 0px;
+    width: 50vw;
+    height: auto;
+    z-index: 2;
+    max-height: 100vh;
     max-width: 100vw;
 }
 
@@ -209,3 +204,49 @@ input {
     background: hsl(55, 7%, 34%);
     cursor: pointer;
   }
+
+  @media (max-width: 1024px) { /* For iPads and lower resolutions */
+    img {
+        height: auto;
+        width: 100%;
+    }
+    
+    .link {
+        font-size: 60px; /* Adjusted for better readability on tablets */
+        margin: 0 20px; /* Adjust spacing */
+    }
+
+    .flux p {
+        font-size: 20px; /* Adjust for readability */
+    }
+
+    .slider-container {
+        top: calc(100% - 60px);
+        left: 50%;
+        width: 80%; /* Adjust slider width for easier use */
+    }
+}
+
+
+  @media (max-width: 767px) { /* For phones */
+    .link {
+        font-size: 40px; /* Smaller screens require smaller fonts */
+        margin: 0 10px;
+    }
+
+    .flux p {
+        font-size: 16px; /* Further adjust for small screens */
+    }
+
+    .title-spacing {
+        letter-spacing: 0.5em; /* Less spacing for smaller screens */
+    }
+
+    .slider-container {
+        width: 100%; /* Make the slider easier to use on small devices */
+    }
+
+    .hint-text, .flux {
+        font-size: 14px; /* Adjust text size for better readability */
+    }
+}
