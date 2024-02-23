@@ -61,7 +61,7 @@ links.forEach(link => {
     link.addEventListener('mouseleave', resetLinkScale);
 });
 
-// 
+
 
 
 
